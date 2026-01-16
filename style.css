@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -18,13 +18,13 @@
 }
 
 .product-category {
-font-size: 12px;
-line-height: 24px;
-text-transform: uppercase;
-color: #A5A3B9;
-margin-top: 30px;
-margin-bottom: 5px;
-display: block;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #A5A3B9;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .product-name {
@@ -49,7 +49,7 @@ display: block;
   
 }
 
-.product-price-lable {
+.product-price-label {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -97,7 +97,7 @@ display: block;
   top: -410px;
   width: 100%;
   height: 500px;
-  background-image: url('images/pattern.png');
+  background-image: url('images/background-pattern.png');
   background-repeat: no-repeat;
   background-position: left top;
   margin: 0;
