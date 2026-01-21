@@ -94,7 +94,7 @@
 .top-drawing {
   z-index: -1;
   position: absolute;
-  top: -410px;
+  top: -390px;
   width: 100%;
   height: 500px;
   background-image: url('images/background-pattern.png');
@@ -105,3 +105,12 @@
   width: 100%;
 }
 
+#change-color-button {
+  background-color: rgb(9, 222, 222);
+  flood-color: #ffffff;
+}
+
+#change-color-button.active {
+  background-color: #cc3600;
+  color: white;
+}
