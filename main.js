@@ -48,19 +48,18 @@ function outputConsoleLog(message) {
 
 // Вывод консоль лог при наведении
 
-const headLine = document.querySelector('.main-title');
+const title = document.querySelector('.main-title');
 
-headLine.addEventListener('mouseover', function() {
-  console.log(headLine.textContent)
-}
-)
+title.addEventListener('mouseover', function() {
+  console.log(title.textContent)
+})
 
 // Изменение цвета кнопни
 
 const button = document.querySelector('#change-color-button')
 
 button.addEventListener('click', function() {
-button.classList.toggle('active')
+  button.classList.toggle('active')
 });
 
 
