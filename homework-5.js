@@ -1,10 +1,10 @@
 // 3 задание. Создал функцию temperature, которая принимает два параметра.
 
-function temperature(degrees, sity) {
-  console.log(`В городе ${sity} сейчас температура ${degrees} градусов по цельсию`);
+function showTemperature(degrees, city) {
+  console.log(`В городе ${city} сейчас температура ${degrees} градусов по Цельсию`);
 }
 
-temperature(-17, "Санкт-Петербург");
+showTemperature(-17, "Санкт-Петербург");
 
 // 4 задание. Создал переменную которая хранит скорость света и сделал функцию проверки скорости ракеты.
 
@@ -26,23 +26,32 @@ checkSpeed(11200);
 
 let productName = 'iphone 16 pro';
 
-let price = 1200;
+let productPrice = 1200;
 
 function buyProduct(budget) {
-  if (budget > price) {
+  if (budget >= productPrice) {
     console.log("iPhone 16 pro приобретен. Спасибо за покупку!");
   } else {
-    console.log("Вам не хватает 200$, пополните баланс.");
+    const missingMoney = productPrice - budget;
+    console.log(`Вам не хватает ${missingMoney}$, пополните баланс.`);
   }
 }
 
-buyProduct(1300);
+buyProduct(1100);
+
 
 // 6 задание. Создал функцию проверки цены продукта.
 
 function checkPrice(price) {
-
+  if (price < 100) {
+    console.log("Дешево");
+  } else {
+    console.log("Дорого");
+  }
 }
+
+checkPrice(150);
+
 
 // 7 задание. Создал 3 переменные для хранения веса тела, гравитации луны и размера обуви.
 
