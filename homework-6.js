@@ -1,7 +1,7 @@
 //задание 3: создал объект с данными о себе
 
 
-const myInfo = {
+const userInfo = {
   name: "Рамазан",
   surname: "Магомедов",
   age: 28,
@@ -27,7 +27,7 @@ const car = {
   transmission: "автоматическая",
 }
 
-car.owner = myInfo;
+car.owner = userInfo;
 
 
 //задание 5: написал функцию, которая принимает объект аргументом
@@ -37,21 +37,21 @@ function addMaxSpeed(vehicle) {
   if (!(vehicle.maxSpeed)) {
     vehicle.maxSpeed = 300;
   }
-  return vehicle;
 }
 
-console.log(addMaxSpeed(car));
+addMaxSpeed(car);
+console.log(car);
 
 
 //задание 6: написал функцию, которая получает первым аргументом объект, а вторым - свойство объекта, и возвращает значение этого свойства
 
 
-function showValue(obj, key) {
+function showObjectValue(obj, key) {
   console.log(obj[key]);
 }
 
-showValue(myInfo, "name");
-showValue(car, "make");
+showObjectValue(userInfo, "name");
+showObjectValue(car, "make");
 
 //задание 7: создал массив котрый содержит названия продуктов
 
@@ -100,17 +100,31 @@ console.log(books);
 //задание 9: создал массив, состоящий из книг, и с помощью оператора объединнил эти два масива в один
 
 
-const moreBooks = [
+const marvelBooks = [
   {
-    title: "Идиот",
-    author: "Фёдор Достоевский",
-    year: 1869,
-    genre: "роман",
-    coverColor: "желтый",
-  }
+    title: "Удивительный Человек-паук",
+    author: "Стэн Ли",
+    year: 1962,
+    genre: "комикс",
+    coverColor: "красно-синий"
+  },
+  {
+    title: "Железный человек",
+    author: "Стэн Ли",
+    year: 1963,
+    genre: "комикс",
+    coverColor: "красно-желтый"
+  },
+  {
+    title: "Капитан Америка",
+    author: "Стэн Ли",
+    year: 1941,
+    genre: "комикс",
+    coverColor: "красно-синий"
+  },
 ];
 
-const allBooks = [...books, ...moreBooks];
+const allBooks = [...books, ...marvelBooks];
 console.log(allBooks);
 
 allBooks.pop();
@@ -121,17 +135,12 @@ console.log(allBooks);
 //задание 10: написал функцию, которая принимает массив сущностей с задния 9 
 
 
-function addRareStatus(entities) {
+function getBooksWithStatus(entities) {
   return entities.map(function(book) {
-    let isRare;
-    if (book.year < 2000) {
-      isRare = true;
-    } else {
-      isRare = false;
-    }
-    return { ...book, isRare };
+    const isRare = book.year < 2000 ? true : false;
+    return { ...book, isRare: isRare };
   });
 }
 
-const result = addRareStatus(allBooks);
+const result = getBooksWithStatus(allBooks);
 console.log(result);
