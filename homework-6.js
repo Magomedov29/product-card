@@ -137,8 +137,7 @@ console.log(allBooks);
 
 function getBooksWithStatus(entities) {
   return entities.map(function(book) {
-    const isRare = book.year < 2000 ? true : false;
-    return { ...book, isRare: isRare };
+    return { ...book, isRare: book.year < 2000};
   });
 }
 
