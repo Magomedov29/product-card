@@ -11,7 +11,7 @@ console.log(comments);
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const newNumbers = numbers.filter(number => number > 4)
+const newNumbers = numbers.filter(number => number > 4);
 
 console.log(newNumbers);
 
@@ -19,9 +19,9 @@ console.log(newNumbers);
 // 3. Создать массив строк, относящихся к любой сущности (название фильмов/книг, кухонные приборы, мебель и т.д.), проверить, есть ли в массиве какая-то определенная сущность.
 
 
-const furniture = ['диван', 'кресло', 'кровать', 'шкаф', 'тумба']
+const furniture = ['диван', 'кресло', 'кровать', 'шкаф', 'тумба'];
 
-const hasTumba = furniture.includes ('тумба')
+const hasTumba = furniture.includes ('тумба');
 
 console.log(hasTumba);
 
