@@ -6,11 +6,15 @@
 export const products = [
   {
     id: 1,
-    image: '/images/moist-mousse.png',
+    image: 'moist-mousse',
     category: 'Для нормальной кожи',
     name: 'Увлажняющий мусс',
     description: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',
-    compound: ['активные натуральные комплексы', 'витамины С, А, РР, В, И Е', 'солнцезащитные компоненты'],
+    compound: [
+      'активные натуральные комплексы',
+      'витамины С, А, РР, В, И Е',
+      'солнцезащитные компоненты',
+    ],
     price: 2750,
   },
   {
@@ -19,8 +23,12 @@ export const products = [
     category: 'Для нормальной кожи',
     description: 'Способствует удерживанию влаги в верхних слоях кожи.',
     price: 3500,
-    compound: ['воски', 'минералы', 'масла'],
-    image: '/images/moist-mask.png',
+    compound: [
+      'воски',
+      'минералы',
+      'масла',
+    ],
+    image: 'moist-mask',
   },
   {
     id: 3,
@@ -28,8 +36,12 @@ export const products = [
     category: 'Для нормальной кожи',
     description: 'Интенсивно очищает, не повреждает защитный барьер кожи.',
     price: 1650,
-    compound: ['минералы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты'],
-    image: '/images/cleansing-gel.png',
+    compound: [
+      'минералы',
+      'витамины С, А, РР, В И Е',
+      'солнцезащитные компоненты',
+    ],
+    image: 'cleansing-gel',
   },
   {
     id: 4,
@@ -37,8 +49,12 @@ export const products = [
     category: 'Для нормальной кожи',
     description: 'Набор, состоящий из увлажняющего крема и маски.',
     price: 4750,
-    compound: ['воски', 'минералы', 'масла'],
-    image: '/images/gift-set1.png',
+    compound: [
+      'воски',
+      'минералы',
+      'масла',
+    ],
+    image: 'gift-set1',
   },
   {
     id: 5,
@@ -46,7 +62,11 @@ export const products = [
     category: 'Для нормальной кожи',
     description: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.',
     price: 7520,
-    compound: ['воски', 'минералы', 'масла'],
-    image: '/images/gift-set5.png',
+    compound: [
+      'воски',
+      'минералы',
+      'масла',
+    ],
+    image: 'gift-set5',
   },
 ];
