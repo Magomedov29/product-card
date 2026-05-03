@@ -40,6 +40,7 @@
 
 .product-compound {
   margin-top: 5px;
+  padding-left: 15px;
   list-style: circle;
   margin-bottom: 25px;
 }
@@ -73,6 +74,14 @@
   max-width: 1200px;
   width: 100%;
   margin-bottom: 116px;
+}
+
+#product-card-list {
+  list-style: none; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
 }
 
 .main-title {
