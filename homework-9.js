@@ -5,39 +5,43 @@
 
 //6. Создать форму для регистрации внутри модального окна. Она должна содержать поля: имя, фамилия, дата рождения, логин, пароль, повторение пароля.
 
+
 document.addEventListener('DOMContentLoaded', function() {
 
-
   let user = null;
-
 
   const openBtn = document.getElementById('open-modal-btn');
   const closeBtn = document.querySelector('.modal-close-btn');
   const modal = document.getElementById('registration-modal');
-  
   const registerForm = document.getElementById('register-form');
+
 
   if (openBtn && modal) {
     openBtn.addEventListener('click', function() {
       modal.classList.add('modal-showed'); 
     });
   }
+
+  // Логика закрытия модального окна при клике на крестик
   if (closeBtn && modal) {
     closeBtn.addEventListener('click', function() {
       modal.classList.remove('modal-showed');
     });
   }
 
-
+  // ЛОГИКА ОТПРАВКИ ФОРМЫ РЕГИСТРАЦИИ
   if (registerForm) {
     registerForm.addEventListener('submit', function(event) {
+      // Блокируем стандартную перезагрузку страницы браузером
       event.preventDefault();
 
+      // Проверяем валидность формы
       if (!registerForm.checkValidity()) {
         alert('Регистрация отклонена: Пожалуйста, заполните все поля корректно.');
         return;
       }
 
+      // Забираем пароли для ручной проверки на совпадение
       const password = document.getElementById('reg-password').value;
       const confirmPassword = document.getElementById('reg-confirm-password').value;
 
@@ -46,16 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      const userData = {
-        firstName: document.getElementById('reg-firstname').value.trim(),
-        lastName: document.getElementById('reg-lastname').value.trim(),
-        birthday: document.getElementById('reg-birthday').value,
-        login: document.getElementById('reg-login').value.trim(),
-        password: password,
-        createdOn: new Date()
-      };
+
+      const dataFromForm = new FormData(registerForm);
+
+      const userData = Object.fromEntries(dataFromForm.entries());
+
+      userData.createdOn = new Date();
 
       user = userData;
+
 
       console.log('Регистрация успешна! Создан объект user:', user);
 
@@ -65,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Вы успешно зарегистрировались!');
     });
   }
-
 
   const subscribeForm = document.querySelector('.footer-subscribe form');
   const emailInput = document.getElementById('email');

@@ -46,8 +46,8 @@
       <h2>Product Cards</h2>
       <p>У нас самые лучшие продукты для кожи!</p>
       <div class="footer-social">
-        <a href="#"><img src="images/tg.png" alt="Telegram"></a>
-        <a href="#"><img src="images/vk.png" alt="VK"></a>
+        <a href="#"><img src="images/tg-icon.svg" alt="Telegram"></a>
+        <a href="#"><img src="images/vk-icon.svg" alt="VK"></a>
       </div>
     </div>
     <section class="footer-subscribe">
@@ -78,32 +78,32 @@
     <button class="modal-close-btn">&times;</button>
     <h2>Регистрация</h2>
     <form id="register-form">
-      <div class="form-group">
-        <label for="reg-firstname">Имя:</label>
-        <input type="text" id="reg-firstname" placeholder="Введите имя..." required>
-      </div>
-      <div class="form-group">
-        <label for="reg-lastname">Фамилия:</label>
-        <input type="text" id="reg-lastname" placeholder="Введите фамилию..." required>
-      </div>
-      <div class="form-group">
-        <label for="reg-birthday">Дата рождения:</label>
-        <input type="date" id="reg-birthday" required>
-      </div>
-      <div class="form-group">
-        <label for="reg-login">Логин:</label>
-        <input type="text" id="reg-login" placeholder="Придумайте логин..." required>
-      </div>
-      <div class="form-group">
-        <label for="reg-password">Пароль:</label>
-        <input type="password" id="reg-password" placeholder="Минимум 6 символов..." minlength="6" required>
-      </div>
-      <div class="form-group">
-        <label for="reg-confirm-password">Повторите пароль:</label>
-        <input type="password" id="reg-confirm-password" placeholder="Повторите пароль..." required>
-      </div>
-      <button type="submit" class="reg-submit-btn">Зарегистрироваться</button>
-    </form>
+  <div class="form-group">
+    <label for="reg-firstname">Имя:</label>
+    <input type="text" id="reg-firstname" name="firstName" placeholder="Имя" required>
+  </div>
+  <div class="form-group">
+    <label for="reg-lastname">Фамилия:</label>
+    <input type="text" id="reg-lastname" name="lastName" placeholder="Фамилия" required>
+  </div>
+  <div class="form-group">
+    <label for="reg-birthday">Дата рождения:</label>
+    <input type="date" id="reg-birthday" name="birthday" required>
+  </div>
+  <div class="form-group">
+    <label for="reg-login">Логин:</label>
+    <input type="text" id="reg-login" name="login" placeholder="Логин" required>
+  </div>
+  <div class="form-group">
+    <label for="reg-password">Пароль:</label>
+    <input type="password" id="reg-password" name="password" placeholder="Пароль" minlength="6" required>
+  </div>
+  <div class="form-group">
+    <label for="reg-confirm-password">Повторите пароль:</label>
+    <input type="password" id="reg-confirm-password" name="confirmPassword" placeholder="Повторите пароль..." required>
+  </div>
+  <button type="submit" class="reg-submit-btn">Отправить</button>
+</form>
 </div>
 </div>
 </body>
