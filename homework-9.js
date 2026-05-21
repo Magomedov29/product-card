@@ -22,26 +22,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Логика закрытия модального окна при клике на крестик
   if (closeBtn && modal) {
     closeBtn.addEventListener('click', function() {
       modal.classList.remove('modal-showed');
     });
   }
 
-  // ЛОГИКА ОТПРАВКИ ФОРМЫ РЕГИСТРАЦИИ
   if (registerForm) {
     registerForm.addEventListener('submit', function(event) {
-      // Блокируем стандартную перезагрузку страницы браузером
       event.preventDefault();
 
-      // Проверяем валидность формы
       if (!registerForm.checkValidity()) {
         alert('Регистрация отклонена: Пожалуйста, заполните все поля корректно.');
         return;
       }
 
-      // Забираем пароли для ручной проверки на совпадение
       const password = document.getElementById('reg-password').value;
       const confirmPassword = document.getElementById('reg-confirm-password').value;
 
