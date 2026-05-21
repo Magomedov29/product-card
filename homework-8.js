@@ -55,10 +55,10 @@ function getQuantity() {
     return 5;
   }
 
-  const num = parseInt(result);
+const num = parseInt(result);
   if (isNaN(num) || num < 1 || num > 5) {
-    alert('Ошибка! Введите число от 1 до 5');
-    return 5;
+  alert('Ошибка! Введите число от 1 до 5');
+  return 5;
   }
   return num;
 }
@@ -68,4 +68,3 @@ const count = getQuantity();
 const shortList = products.slice(0, count);
 
 createProductCard(shortList);
-
